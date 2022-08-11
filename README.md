@@ -1,3 +1,7 @@
+Actualizado por Valente, el 11 de Agosto 2022
+(No entiendo que carajos estoy haciendo!!) 
+
+
 # ESP32CAM_MQTT-Basic
 Este repositorio contiene el programa básico para conectar el ESP32CAM a MQTT, enviar y recibir mensajes.
 
