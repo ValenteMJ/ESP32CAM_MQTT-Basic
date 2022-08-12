@@ -24,8 +24,8 @@ const char* ssid = "INFINITUMCE9D_2.4";  // Aquí debes poner el nombre de tu re
 const char* password = "mabbe7dSNf";  // Aquí debes poner la contraseña de tu red
 
 //Datos del broker MQTT
-const char* mqtt_server = "192.168.15.33"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
-IPAddress server(192,168,15,33);
+const char* mqtt_server = "192.168.1.72"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
+IPAddress server(192.168.1.72);
 
 // Objetos
 WiFiClient espClient; // Este objeto maneja los datos de conexion WiFi
@@ -84,7 +84,8 @@ void setup() {
 }// fin del void setup ()
 
 // Cuerpo del programa, bucle principal
-void loop() {
+void loop() 
+{
   //Verificar siempre que haya conexión al broker
   if (!client.connected()) {
     reconnect();  // En caso de que no haya conexión, ejecutar la función de reconexión, definida despues del void setup ()
@@ -103,6 +104,10 @@ void loop() {
     client.publish("codigoIoT/ejemplos/MQTT", dataString); // Esta es la función que envía los datos por MQTT, especifica el tema y el valor
   }// fin del if (timeNow - timeLast > wait)
 }// fin del void loop ()
+
+
+
+
 
 // Funciones de usuario
 
